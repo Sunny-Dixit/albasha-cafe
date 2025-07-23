@@ -47,19 +47,23 @@ const ShakesSection = () => {
       <div className="absolute bottom-[-40px] right-[-40px] w-72 h-72 bg-yellow-300 opacity-20 rounded-full blur-2xl -z-10"></div>
 
       {/* Header */}
-      <div className="max-w-2xl mx-auto text-center mb-14">
-        <div className="flex items-center justify-center gap-4">
-          <h2 className="text-3xl font-bold poppins-regular text-gray-900 font-serif">Our Shaking Creations</h2>
-          <div className="w-16 h-16">
-            <iframe
-              src="https://lottie.host/embed/5ceae3a1-fe39-4c70-b77c-d4e2bcf10f77/PUy3IiyF2B.lottie"
-              className="w-full h-full"
-              title="Shake Animation"
-            ></iframe>
-          </div>
-        </div>
-        <p className="text-gray-600 poppins-regular text-base mt-3">Thick, creamy & full of flavor – shake it up!</p>
-      </div>
+     <div className="max-w-2xl mx-auto text-center mb-10 px-4">
+  <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold poppins-regular text-gray-900 font-serif">
+      Our Shaking Creations
+    </h2>
+    <div className="w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16">
+      <iframe
+        src="https://lottie.host/embed/5ceae3a1-fe39-4c70-b77c-d4e2bcf10f77/PUy3IiyF2B.lottie"
+        className="w-full h-full"
+        title="Shake Animation"
+      ></iframe>
+    </div>
+  </div>
+  <p className="text-sm sm:text-base md:text-lg text-gray-600 poppins-regular mt-3">
+    Thick, creamy & full of flavor – shake it up!
+  </p>
+</div>
 
       {/* Grid */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
