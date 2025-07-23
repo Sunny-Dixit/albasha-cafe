@@ -27,7 +27,7 @@ const Hero = () => {
               <img
                 src="/Images/Banner/mobile-banner-2.png"
                 alt="Skin Treatment 1"
-                className="w-full h-[200px] sm:h-[160px] object-cover "
+                className="w-full h-[250px] sm:h-[160px] object-cover "
                 loading="lazy"
               />
 
