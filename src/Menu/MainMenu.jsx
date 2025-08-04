@@ -251,6 +251,7 @@ const dummyCategories = [
 const MenuStrip = ({ title, items, icon, theme, addToCart }) => {
   const [expandedItems, setExpandedItems] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
+  const [selectedImage, setSelectedImage] = useState(null); // State for image popup
 
   const filteredItems = items.filter(item => 
     item.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
@@ -333,11 +334,19 @@ const MenuStrip = ({ title, items, icon, theme, addToCart }) => {
                 >
                   <div className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border ${theme.border}`}>
                     {item.imagePath ? (
-                      <img
-                        src={`${API_BASE_URL}${item.imagePath}`}
-                        alt={item.name}
-                        className="object-cover w-full h-full"
-                      />
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation(); // Prevent expanding the item
+                          setSelectedImage(`${API_BASE_URL}${item.imagePath}`);
+                        }}
+                        className="w-full h-full"
+                      >
+                        <img
+                          src={`${API_BASE_URL}${item.imagePath}`}
+                          alt={item.name}
+                          className="object-cover w-full h-full hover:opacity-90 transition-opacity"
+                        />
+                      </button>
                     ) : (
                       <div className="w-full h-full bg-gray-100 flex items-center justify-center">
                         <GiCoffeeCup className="text-gray-400 text-2xl" />
@@ -453,6 +462,42 @@ const MenuStrip = ({ title, items, icon, theme, addToCart }) => {
           )}
         </div>
       </div>
+
+      {/* Image Popup Modal */}
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4"
+            onClick={() => setSelectedImage(null)}
+          >
+            <motion.div
+              initial={{ scale: 0.9 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.9 }}
+              className="relative max-w-4xl w-full max-h-[90vh]"
+              onClick={e => e.stopPropagation()}
+            >
+              <button
+                className="absolute top-2 right-2 bg-black bg-opacity-60 text-white rounded-full p-2 z-10"
+                onClick={() => setSelectedImage(null)}
+              >
+                <FaTimes className="text-xl" />
+              </button>
+              <div className="bg-white rounded-lg overflow-hidden shadow-2xl">
+                <img 
+                  src={selectedImage} 
+                  alt="Enlarged menu item" 
+                  className="w-full h-auto max-h-[80vh] object-contain"
+                />
+              
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };

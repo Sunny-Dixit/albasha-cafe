@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 const CrepesItems = [
   {
     name: 'NUTELLA CREPE',
-    image: '/Images/crepes-1.png',
+    image: '/Images/Crepe/nutella-crepe.png',
     icon: <GiStrawberry className="text-red-500" />, // fruit-themed
     description: 'Nutella, Cream, Fruit',
     price: '129 kr',
@@ -17,7 +17,7 @@ const CrepesItems = [
   },
   {
     name: "CHILDREN'S CREPES",
-    image: '/Images/crepes-2.png',
+    image: '/Images/Crepe/childeren-crepe.png',
     icon: <FaChild className="text-amber-800" />, // child-friendly icon
     description: 'Nutella, White chocolate, Cream, Fruit',
     price: '129 kr',
@@ -25,7 +25,7 @@ const CrepesItems = [
   },
   {
     name: "CREPE'S ROLE",
-    image: '/Images/crepes-3.png',
+    image: '/Images/Crepe/crepe-roll.png',
     icon: <GiBananaBunch className="text-yellow-600" />, // banana/pistachio focus
     description: 'Nutella, white chocolate, pistachios, cream, banana, fruit',
     price: '139 kr',
@@ -33,7 +33,7 @@ const CrepesItems = [
   },
   {
   name: 'MINI PANCAKES 9 PCS',
-  image: '/Images/crepes-4.png',
+  image: '/Images/Crepe/mini-pancake.png',
   icon: <PiStackSimpleFill className="text-blue-800" />,
   description: 'Nutella, white chocolate, cream, fruit',
   price: '129 kr',

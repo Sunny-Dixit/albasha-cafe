@@ -4,28 +4,28 @@ import { useNavigate } from 'react-router-dom';
 const shakes = [
   {
     name: 'Strawberry Milkshake',
-    image: '/Images/straberry-shake.png',
+    image: '/Images/Shake/strawberry-milkshake.png',
     description: 'Classic strawberry milkshake – sweet and creamy',
     price: '75 kr',
     color: 'bg-rose-100'
   },
   {
     name: 'Avocado Milkshake',
-    image: '/Images/avocado-shake.png',
+    image: '/Images/Shake/Avocado-Milkshake.png',
     description: 'Nutritious and smooth avocado in every sip',
     price: '85 kr',
     color: 'bg-amber-100'
   },
   {
     name: 'Pina Colada',
-    image: '/Images/pinocolada.png',
+    image: '/Images/Shake/pina-colada.png',
     description: 'Pineapple and coconut in tropical harmony',
     price: '89 kr',
     color: 'bg-lime-100'
   },
   {
     name: 'Mojito',
-    image: '/Images/mojito.png',
+    image: '/Images/Shake/mojito.avif',
     description: 'Fresh mint, lime juice',
     price: '89 kr',
     color: 'bg-purple-100'
@@ -47,19 +47,23 @@ const ShakesSection = () => {
       <div className="absolute bottom-[-40px] right-[-40px] w-72 h-72 bg-yellow-300 opacity-20 rounded-full blur-2xl -z-10"></div>
 
       {/* Header */}
-      <div className="max-w-2xl mx-auto text-center mb-14">
-        <div className="flex items-center justify-center gap-4">
-          <h2 className="text-3xl font-bold poppins-regular text-gray-900 font-serif">Our Shaking Creations</h2>
-          <div className="w-16 h-16">
-            <iframe
-              src="https://lottie.host/embed/5ceae3a1-fe39-4c70-b77c-d4e2bcf10f77/PUy3IiyF2B.lottie"
-              className="w-full h-full"
-              title="Shake Animation"
-            ></iframe>
-          </div>
-        </div>
-        <p className="text-gray-600 poppins-regular text-base mt-3">Thick, creamy & full of flavor – shake it up!</p>
-      </div>
+    <div className="max-w-2xl mx-auto text-center mb-10 px-4">
+  <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold poppins-regular text-gray-900 font-serif">
+      Our Shaking Creations
+    </h2>
+    <div className="w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16">
+      <iframe
+        src="https://lottie.host/embed/5ceae3a1-fe39-4c70-b77c-d4e2bcf10f77/PUy3IiyF2B.lottie"
+        className="w-full h-full"
+        title="Shake Animation"
+      ></iframe>
+    </div>
+  </div>
+  <p className="text-sm sm:text-base md:text-lg text-gray-600 poppins-regular mt-3">
+    Thick, creamy & full of flavor – shake it up!
+  </p>
+</div>
 
       {/* Grid */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
@@ -79,7 +83,7 @@ const ShakesSection = () => {
                 alt={item.name}
                 className="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-full w-auto object-contain group-hover:animate-shake"
               />
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-24 rounded-full bg-white/30 blur-lg group-hover:animate-wobble"></div>
+              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-24 rounded-full  blur-lg group-hover:animate-wobble"></div>
             </div>
 
             <div className="text-center">

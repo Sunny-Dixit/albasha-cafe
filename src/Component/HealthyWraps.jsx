@@ -5,26 +5,26 @@ import { Link } from 'react-router-dom';
 const dessertItems = [
   {
     name: 'BAKLAWA',
-    image: '/Images/desert-1.png',
+    image: '/Images/Desert/baklawa.png',
     desc: 'A rich mix of baklawa shapes filled with pistachios and walnuts. Contains wheat, milk, margarine, and corn starch.',
     priceSt: '12 kr',
     priceKg: '280 SEK'
   },
   {
     name: 'OSMA LEYYELI PISTACHIO',
-    image: '/Images/desert-2.png',
+    image: '/Images/Desert/LEYYELI-PISTACHIO.png',
     desc: 'Contains: wheat flour, corn starch, sunflower oil, glucose, salt, syrup, animal margarine, filling, pistachios',
 priceSt: '15 kr',
     priceKg: '330 SEK'  },
   {
     name: 'PASTRY FRUIT VANILLA CREAM',
-    image: '/Images/desert-3.png',
+    image: '/Images/Desert/VANILLA-CREAM.png',
     desc: 'White cake base, cream, fruit cocktail, white chocolate',
       priceSt: '40 kr'
   },
   {
     name: 'PASTRY FRUIT CHOCOLATE',
-    image: '/Images/desert-4.png',
+    image: '/Images/Desert/pastry-fruit-chocklate.png',
     desc: 'Chocolate cake base, cream, fruit something, chocolate.',
     priceSt: '40 kr'
   }
