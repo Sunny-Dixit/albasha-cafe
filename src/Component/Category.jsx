@@ -3,7 +3,7 @@ import React from "react";
 const categories = [
   {
     name: "Caffè",
-    image: "/Images/coffe-top-category.png",
+    image: "/Images/coffe-2-main.jpg",
   },
   {
     name: "Cake",
@@ -11,11 +11,11 @@ const categories = [
   },
   {
     name: "Sweets",
-    image: "/Images/desert-1.png",
+    image: "/Images/Desert/baklawa.png",
   },
   {
     name: "Shake",
-    image: "/Images/straberry-shake.png", // Make sure this file exists
+    image: "/Images/Shake/strawberry-milkshake.png", // Make sure this file exists
   },
 ];
 

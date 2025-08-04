@@ -4,28 +4,28 @@ import { useNavigate } from 'react-router-dom';
 const shakes = [
   {
     name: 'Strawberry Milkshake',
-    image: '/Images/straberry-shake.png',
+    image: '/Images/Shake/strawberry-milkshake.png',
     description: 'Classic strawberry milkshake – sweet and creamy',
     price: '75 kr',
     color: 'bg-rose-100'
   },
   {
     name: 'Avocado Milkshake',
-    image: '/Images/avocado-shake.png',
+    image: '/Images/Shake/Avocado-Milkshake.png',
     description: 'Nutritious and smooth avocado in every sip',
     price: '85 kr',
     color: 'bg-amber-100'
   },
   {
     name: 'Pina Colada',
-    image: '/Images/pinocolada.png',
+    image: '/Images/Shake/pina-colada.png',
     description: 'Pineapple and coconut in tropical harmony',
     price: '89 kr',
     color: 'bg-lime-100'
   },
   {
     name: 'Mojito',
-    image: '/Images/mojito.png',
+    image: '/Images/Shake/mojito.avif',
     description: 'Fresh mint, lime juice',
     price: '89 kr',
     color: 'bg-purple-100'
@@ -83,7 +83,7 @@ const ShakesSection = () => {
                 alt={item.name}
                 className="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-full w-auto object-contain group-hover:animate-shake"
               />
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-24 rounded-full bg-white/30 blur-lg group-hover:animate-wobble"></div>
+              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-24 rounded-full  blur-lg group-hover:animate-wobble"></div>
             </div>
 
             <div className="text-center">
