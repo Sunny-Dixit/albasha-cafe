@@ -1,53 +1,48 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
+const images = [
+  "/Images/Banner/final-banner-4.png",
+  "/Images/Banner/final-banner-2.png",
+  "/Images/Banner/final-banner-3.png",
+];
 
 const Hero = () => {
+  const [index, setIndex] = useState(0);
+  const [showImage, setShowImage] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setShowImage(false); // Start exit animation
+      setTimeout(() => {
+        setIndex((prev) => (prev + 1) % images.length);
+        setShowImage(true); // Start entry animation
+      }, 2000); // match exit duration
+    }, 5000); // image visible for 5s
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <>
-      {/* Desktop Hero Section */}
-      <section className="hidden md:block relative z-0 w-full overflow-hidden">
-        <div className="carousel-inner relative">
-          <div className="carousel-item active relative">
-            <img
-              src="/Images/Banner/final-banner-4.png"
-              className="block w-full h-[500px] object-cover m-0 p-0"
-              alt="albasha cafe"
-              loading="lazy"
-            />
+    <section className="relative w-full h-[500px] overflow-hidden bg-white">
+      <AnimatePresence>
+        {showImage && (
+         <motion.img
+  key={index}
+  src={images[index]}
+  alt="Banner"
+  className="absolute w-full h-full object-cover"
+  initial={{ opacity: 0, scale: 1.2 }}
+  animate={{ opacity: 1, scale: 1 }}
+  exit={{ opacity: 0, scale: 0.6 }} // Slightly shrink instead of too fast to 0.4
+  transition={{ duration: 2.5, ease: "easeInOut" }} // Slower and smoother
+/>
 
-            {/* Banner Text Content */}
-            <div className="absolute top-1/2 left-10 transform -translate-y-1/2 text-left">
-              {/* Heading */}
+        )}
+      </AnimatePresence>
 
-              {/* Button below logo */}
-              <button className="mt-30 ml-15 poppins-regular px-5 py-2 bg-amber-700 text-white text-lg rounded-md hover:bg-amber-800 transition duration-300">
-  Explore the Menu
-</button>
-
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-
-
-      {/* Mobile Hero Section */}
-    <section className="block md:hidden rounded-lg relative z-0 bg-white">
-  <div id="mobile-demo" className="carousel slide relative" data-bs-ride="carousel" data-bs-interval="2500">
-    <div className="carousel-inner overflow-hidden shadow-md">
-      <div className="carousel-item active relative">
-        <img
-          src="/Images/Banner/final-banner-4.png"
-          alt="Skin Treatment 1"
-          className="w-full object-contain max-h-[250px]"
-          loading="lazy"
-        />
-      </div>
-    </div>
-  </div>
-</section>
-
-    </>
+      {/* Optional Button/Text */}
+     
+    </section>
   );
 };
 
