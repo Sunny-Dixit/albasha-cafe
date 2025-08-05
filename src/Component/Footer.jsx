@@ -53,15 +53,18 @@ const CafeFooter = () => {
                   031-388 01 94
                 </a>
               </li>
-              <li className="flex items-center">
-                <FaEnvelope className="mr-3 text-[#c9af7f]" />
-                <a
-                  href="mailto:albashagbg@hotmail.com"
-                  className="text-white hover:underline"
-                >
-                  albashagbg@hotmail.com
-                </a>
-              </li>
+             <li className="flex items-center">
+  <span className="min-w-[24px] text-[#c9af7f] text-xl flex justify-center">
+    <FaEnvelope />
+  </span>
+  <a
+    href="mailto:albashagbg@hotmail.com"
+    className="text-white hover:underline ml-3"
+  >
+    albashagbg@hotmail.com
+  </a>
+</li>
+
             </ul>
           </div>
 
