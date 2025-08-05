@@ -616,6 +616,7 @@ const AboutUs = () => {
               </p>
             </motion.div>
 
+<<<<<<< HEAD
         <div className="grid md:grid-cols-3 gap-8">
   {seasonalItems.find(s => s.season === seasons[currentSeason].name)?.items.map((item, index) => (
     <motion.div
@@ -666,6 +667,83 @@ const AboutUs = () => {
 </div>
 
 
+=======
+            <div className="grid md:grid-cols-3 gap-8">
+              {seasonalItems.find(s => s.season === seasons[currentSeason].name)?.items.map((item, index) => (
+                <motion.div
+                  key={index}
+                  className="h-[400px] perspective-1000"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1, duration: 0.6 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  onMouseEnter={() => setHoveredCard(`menu-${index}`)}
+                  onMouseLeave={() => setHoveredCard(null)}
+                >
+                  <div className="relative w-full h-full transition-all duration-700 transform-style-preserve-3d group hover:rotate-y-180">
+                    {/* Front of card */}
+                    <div className="absolute w-full h-full backface-hidden bg-white rounded-2xl shadow-xl p-8 flex flex-col justify-between overflow-hidden">
+                      <div>
+                        <div className="w-20 h-20 rounded-full mb-6 flex items-center justify-center shadow-md"
+                          style={{ background: seasons[currentSeason].color }}>
+                          {React.cloneElement(seasons[currentSeason].icon, {
+                            size: 36,
+                            color: seasons[currentSeason].darkColor
+                          })}
+                        </div>
+                        <h3 className="text-2xl font-bold mb-3">{item.name}</h3>
+                        <p className="text-gray-600 mb-6">{item.desc}</p>
+
+                        {/* Ingredient visualization */}
+                       
+                      </div>
+
+                      <div>
+                        <p className="text-lg font-medium mb-2" style={{ color: seasons[currentSeason].darkColor }}>
+                          {item.price}
+                        </p>
+                        <p className="text-sm text-gray-500">
+                          Pairs perfectly with: <span className="font-medium">{item.pairing}</span>
+                        </p>
+                      </div>
+
+                      {/* Decorative corner */}
+                      <div className="absolute -bottom-10 -right-10 w-32 h-32 rounded-full opacity-10"
+                        style={{ backgroundColor: seasons[currentSeason].darkColor }} />
+                    </div>
+
+                    {/* Back of card */}
+                    <div className="absolute w-full h-full backface-hidden rounded-2xl shadow-xl p-8 flex items-center justify-center rotate-y-180 overflow-hidden"
+                      style={{
+                        background: seasons[currentSeason].darkColor,
+                        color: seasons[currentSeason].color
+                      }}>
+                      <div className="text-center p-6">
+                        <div className="text-5xl mb-6">
+                          {React.cloneElement(seasons[currentSeason].icon, { size: 48 })}
+                        </div>
+                        <p className="text-xl font-medium mb-2">"{seasons[currentSeason].name}'s Special"</p>
+                        <p className="opacity-80 mb-6">A seasonal masterpiece</p>
+                        <motion.div
+                          className="inline-block px-6 py-2 rounded-full border border-current"
+                          whileHover={{
+                            backgroundColor: seasons[currentSeason].color,
+                            color: seasons[currentSeason].darkColor
+                          }}
+                        >
+                          <span className="font-medium">Recipe Story</span>
+                        </motion.div>
+                      </div>
+
+                      {/* Decorative corner */}
+                      <div className="absolute -bottom-10 -right-10 w-32 h-32 rounded-full opacity-10"
+                        style={{ backgroundColor: seasons[currentSeason].color }} />
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+>>>>>>> d54f94df16c6e8e75380bcf7f81df04a91063cee
           </div>
         </section>
 
@@ -802,6 +880,7 @@ const AboutUs = () => {
               </motion.div>
 
               {/* Interactive Map */}
+<<<<<<< HEAD
              <motion.div
   className="md:w-1/2 relative"
   initial={{ opacity: 0, x: 30 }}
@@ -846,6 +925,77 @@ const AboutUs = () => {
   </div>
 </motion.div>
 
+=======
+              <motion.div
+                className="md:w-1/2 relative"
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <div className="sticky top-28 h-[600px] rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
+                  {/* Map placeholder with seasonal overlay */}
+                  <div className="absolute inset-0 bg-gray-300 flex items-center justify-center">
+                    <span className="text-gray-500">[Interactive Map]</span>
+                  </div>
+
+                  {/* Seasonal marker */}
+                  <motion.div
+                    className="absolute top-1/2 left-1/2 w-16 h-16 rounded-full flex items-center justify-center shadow-xl"
+                    style={{
+                      backgroundColor: seasons[currentSeason].darkColor,
+                      color: seasons[currentSeason].color
+                    }}
+                    animate={{
+                      scale: [1, 1.1, 1],
+                      y: [-10, 0, -10]
+                    }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity
+                    }}
+                  >
+                    <GiCoffeeCup size={24} />
+                  </motion.div>
+
+                  {/* Info card */}
+                  <motion.div
+                    className="absolute bottom-8 left-8 right-8 bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-lg"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4 }}
+                  >
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 rounded-full flex items-center justify-center"
+                        style={{
+                          backgroundColor: seasons[currentSeason].color,
+                          color: seasons[currentSeason].darkColor
+                        }}>
+                        {React.cloneElement(seasons[currentSeason].icon, { size: 20 })}
+                      </div>
+                      <div>
+                        <h4 className="font-bold">Fika {seasons[currentSeason].name}</h4>
+                        <p className="text-sm text-gray-600">Come experience our seasonal offerings</p>
+                      </div>
+                    </div>
+
+                    <motion.button
+                      className="mt-4 w-full py-3 rounded-lg font-medium"
+                      style={{
+                        backgroundColor: seasons[currentSeason].darkColor,
+                        color: seasons[currentSeason].color
+                      }}
+                      whileHover={{
+                        y: -2,
+                        boxShadow: `0 5px 15px rgba(${hexToRgb(seasons[currentSeason].darkColor)}, 0.3)`
+                      }}
+                    >
+                      Get Directions
+                    </motion.button>
+                  </motion.div>
+                </div>
+              </motion.div>
+>>>>>>> d54f94df16c6e8e75380bcf7f81df04a91063cee
             </div>
           </div>
         </section>

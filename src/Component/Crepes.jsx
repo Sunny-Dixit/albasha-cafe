@@ -16,7 +16,11 @@ const CrepesItems = [
     accent: 'from-rose-50 to-red-100'
   },
   {
+<<<<<<< HEAD
     name: "KINDER CREPES",
+=======
+    name: "CHILDREN'S CREPES",
+>>>>>>> d54f94df16c6e8e75380bcf7f81df04a91063cee
     image: '/Images/Crepe/childeren-crepe.png',
     icon: <FaChild className="text-amber-800" />, // child-friendly icon
     description: 'Nutella, Vit chocklad, Grädde, Frukt',
@@ -24,7 +28,11 @@ const CrepesItems = [
     accent: 'from-yellow-50 to-amber-100'
   },
   {
+<<<<<<< HEAD
     name: "CREPES ROLL",
+=======
+    name: "CREPE'S ROLE",
+>>>>>>> d54f94df16c6e8e75380bcf7f81df04a91063cee
     image: '/Images/Crepe/crepe-roll.png',
     icon: <GiBananaBunch className="text-yellow-600" />, // banana/pistachio focus
     description: 'Nutella, vit chocklad, Pistagenötter, Grädde, Banan, Frukt',
@@ -32,6 +40,7 @@ const CrepesItems = [
     accent: 'from-yellow-50 to-yellow-100'
   },
   {
+<<<<<<< HEAD
     name: 'MINI PANCAKE 9 ST',
     image: '/Images/Crepe/mini-pancake.png',
     icon: <PiStackSimpleFill className="text-blue-800" />,
@@ -39,6 +48,15 @@ const CrepesItems = [
     price: '129 kr',
     accent: 'from-blue-50 to-sky-100'
   }
+=======
+  name: 'MINI PANCAKES 9 PCS',
+  image: '/Images/Crepe/mini-pancake.png',
+  icon: <PiStackSimpleFill className="text-blue-800" />,
+  description: 'Nutella, white chocolate, cream, fruit',
+  price: '129 kr',
+  accent: 'from-blue-50 to-sky-100'
+}
+>>>>>>> d54f94df16c6e8e75380bcf7f81df04a91063cee
 ];
 
 

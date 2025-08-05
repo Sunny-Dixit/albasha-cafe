@@ -5,24 +5,40 @@ const shakes = [
   {
     name: 'Strawberry Milkshake',
     image: '/Images/Shake/strawberry-milkshake.png',
+<<<<<<< HEAD
+=======
+    description: 'Classic strawberry milkshake – sweet and creamy',
+>>>>>>> d54f94df16c6e8e75380bcf7f81df04a91063cee
     price: '75 kr',
     color: 'bg-rose-100'
   },
   {
     name: 'Avocado Milkshake',
     image: '/Images/Shake/Avocado-Milkshake.png',
+<<<<<<< HEAD
+=======
+    description: 'Nutritious and smooth avocado in every sip',
+>>>>>>> d54f94df16c6e8e75380bcf7f81df04a91063cee
     price: '85 kr',
     color: 'bg-amber-100'
   },
   {
     name: 'Pina Colada',
     image: '/Images/Shake/pina-colada.png',
+<<<<<<< HEAD
+=======
+    description: 'Pineapple and coconut in tropical harmony',
+>>>>>>> d54f94df16c6e8e75380bcf7f81df04a91063cee
     price: '89 kr',
     color: 'bg-lime-100'
   },
   {
     name: 'Mojito',
     image: '/Images/Shake/mojito.avif',
+<<<<<<< HEAD
+=======
+    description: 'Fresh mint, lime juice',
+>>>>>>> d54f94df16c6e8e75380bcf7f81df04a91063cee
     price: '89 kr',
     color: 'bg-purple-100'
   }
@@ -43,15 +59,25 @@ const ShakesSection = () => {
       <div className="absolute bottom-[-40px] right-[-40px] w-72 h-72 bg-yellow-300 opacity-20 rounded-full blur-2xl -z-10"></div>
 
       {/* Header */}
+<<<<<<< HEAD
      <div className="max-w-2xl mx-auto text-center mb-10 px-4">
   <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
     <div className="w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16">
+=======
+    <div className="max-w-2xl mx-auto text-center mb-10 px-4">
+  <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold poppins-regular text-gray-900 font-serif">
+      Our Shaking Creations
+    </h2>
+    <div className="w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16">
+>>>>>>> d54f94df16c6e8e75380bcf7f81df04a91063cee
       <iframe
         src="https://lottie.host/embed/5ceae3a1-fe39-4c70-b77c-d4e2bcf10f77/PUy3IiyF2B.lottie"
         className="w-full h-full"
         title="Shake Animation"
       ></iframe>
     </div>
+<<<<<<< HEAD
     <h2 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold poppins-regular text-gray-900 font-serif">
       Våra skakande skapelser
     </h2>
@@ -60,6 +86,11 @@ const ShakesSection = () => {
 
   <p className="text-xs sm:text-sm md:text-base text-gray-600 poppins-regular mt-3 leading-relaxed">
     Tjock, krämig och full av smak – skaka loss!
+=======
+  </div>
+  <p className="text-sm sm:text-base md:text-lg text-gray-600 poppins-regular mt-3">
+    Thick, creamy & full of flavor – shake it up!
+>>>>>>> d54f94df16c6e8e75380bcf7f81df04a91063cee
   </p>
 </div>
 

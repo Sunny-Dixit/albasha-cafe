@@ -15,7 +15,11 @@ const categories = [
   },
   {
     name: "Shake",
+<<<<<<< HEAD
     image: "/Images/Shake/strawberry-milkshake.png",
+=======
+    image: "/Images/Shake/strawberry-milkshake.png", // Make sure this file exists
+>>>>>>> d54f94df16c6e8e75380bcf7f81df04a91063cee
   },
 ];
 

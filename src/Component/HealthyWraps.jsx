@@ -6,17 +6,28 @@ const dessertItems = [
   {
     name: 'BAKLAWA',
     image: '/Images/Desert/baklawa.png',
+<<<<<<< HEAD
     desc: 'Ett stort och varierande urval av baklawa former. Innehåller: Vetemjöl, majsstärkelse, animalisk margarin, mjölk, solrosolja, glukos, fyllning pistage & valnötter.',
+=======
+    desc: 'A rich mix of baklawa shapes filled with pistachios and walnuts. Contains wheat, milk, margarine, and corn starch.',
+>>>>>>> d54f94df16c6e8e75380bcf7f81df04a91063cee
     priceSt: '12 kr',
     priceKg: '280 kr'
   },
   {
+<<<<<<< HEAD
     name: 'OSMA LEYYELI PISTAGE',
     image: '/Images/Desert/LEYYELI-PISTACHIO.png',
     desc: 'Innehåller: vetemjöl, majsstärkelse, solrosolja, glukos, salt, sirap, animalisk margarin, fyllning, pistagenötter',
+=======
+    name: 'OSMA LEYYELI PISTACHIO',
+    image: '/Images/Desert/LEYYELI-PISTACHIO.png',
+    desc: 'Contains: wheat flour, corn starch, sunflower oil, glucose, salt, syrup, animal margarine, filling, pistachios',
+>>>>>>> d54f94df16c6e8e75380bcf7f81df04a91063cee
 priceSt: '15 kr',
     priceKg: '330 kr'  },
   {
+<<<<<<< HEAD
     name: 'BAKELSE FRUKT VANILJGRÄDDE',
     image: '/Images/Desert/VANILLA-CREAM.png',
     desc: 'Vittårtbotten, grädde, fruktkoktail, vitchoklad',
@@ -26,6 +37,17 @@ priceSt: '15 kr',
     name: 'BAKELSE FRUKT CHOKLAD',
     image: '/Images/Desert/pastry-fruit-chocklate.png',
     desc: 'Chokladtårtbotten, grädde, frukt något, choklad',
+=======
+    name: 'PASTRY FRUIT VANILLA CREAM',
+    image: '/Images/Desert/VANILLA-CREAM.png',
+    desc: 'White cake base, cream, fruit cocktail, white chocolate',
+      priceSt: '40 kr'
+  },
+  {
+    name: 'PASTRY FRUIT CHOCOLATE',
+    image: '/Images/Desert/pastry-fruit-chocklate.png',
+    desc: 'Chocolate cake base, cream, fruit something, chocolate.',
+>>>>>>> d54f94df16c6e8e75380bcf7f81df04a91063cee
     priceSt: '40 kr'
   }
 ];

@@ -23,26 +23,40 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative w-full h-[500px] overflow-hidden bg-white">
-      <AnimatePresence>
-        {showImage && (
-         <motion.img
-  key={index}
-  src={images[index]}
-  alt="Banner"
-  className="absolute w-full h-full object-cover"
-  initial={{ opacity: 0, scale: 1.2 }}
-  animate={{ opacity: 1, scale: 1 }}
-  exit={{ opacity: 0, scale: 0.6 }} // Slightly shrink instead of too fast to 0.4
-  transition={{ duration: 2.5, ease: "easeInOut" }} // Slower and smoother
-/>
+    <>
+      {/* Desktop Hero Section */}
+      <section className="hidden md:block relative w-full overflow-hidden">
+          <div className="carousel-inner">
+            <div className="carousel-item active relative">
+              <img
+                src="/Images/Banner/desktop-banner.png"
+                className="block w-full h-[700px] object-cover m-0 p-0"
+                alt="albasha cafe"
+                loading="lazy"
+              />
 
-        )}
-      </AnimatePresence>
 
-      {/* Optional Button/Text */}
-     
-    </section>
+            </div>
+          </div>
+      </section>
+
+      {/* Mobile Hero Section */}
+      <section className="block md:hidden rounded-lg">
+        <div id="mobile-demo" className="carousel slide relative" data-bs-ride="carousel" data-bs-interval="2500">
+          <div className="carousel-inner overflow-hidden shadow-md">
+            <div className="carousel-item active relative">
+              <img
+                src="/Images/Banner/mobile-banner-2.png"
+                alt="Skin Treatment 1"
+                className="w-full h-[200px] sm:h-[160px] object-cover "
+                loading="lazy"
+              />
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 
