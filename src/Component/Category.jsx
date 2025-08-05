@@ -15,41 +15,41 @@ const categories = [
   },
   {
     name: "Shake",
-    image: "/Images/Shake/strawberry-milkshake.png", // Make sure this file exists
+    image: "/Images/Shake/strawberry-milkshake.png",
   },
 ];
 
 export default function Categories() {
   return (
     <section className="relative py-8 px-4 overflow-hidden poppins-black">
-      {/* ☕ Coffee Bean Decorations */}
+      {/* ☕ Kaffebönor Dekorationer */}
       <img
         src="/Images/coffe.png"
-        alt="Top Coffee Beans"
+        alt="Övre kaffebönor"
         className="absolute top-0 left-0 w-24 md:w-36 -translate-x-4 -translate-y-4 pointer-events-none select-none"
       />
       <img
         src="/Images/corner.png"
-        alt="Bottom Coffee Beans"
+        alt="Nedre kaffebönor"
         className="absolute bottom-0 right-0 w-24 md:w-36 translate-x-4 translate-y-4 pointer-events-none select-none"
       />
 
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
+        {/* Rubrik */}
         <div className="text-center mb-6">
           <div className="inline-flex items-center justify-center gap-4">
             <iframe
               src="https://lottie.host/embed/4aec28fb-a72b-4d06-9c03-5521404beb44/tl1XtLVh4S.lottie"
               style={{ width: "60px", height: "60px", border: "none" }}
-              title="Coffee Cup Animation"
+              title="Kaffekopp-animation"
             ></iframe>
             <p className="text-black poppins-regular font-bold text-xl md:text-2xl font-serif">
-              Top Category
+              Toppkategori
             </p>
           </div>
         </div>
 
-        {/* Grid */}
+        {/* Rutnät */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-2 gap-y-3 place-items-center">
           {categories.map((cat, i) => (
             <div

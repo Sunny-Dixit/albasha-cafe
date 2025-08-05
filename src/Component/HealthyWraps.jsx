@@ -6,26 +6,26 @@ const dessertItems = [
   {
     name: 'BAKLAWA',
     image: '/Images/Desert/baklawa.png',
-    desc: 'A rich mix of baklawa shapes filled with pistachios and walnuts. Contains wheat, milk, margarine, and corn starch.',
+    desc: 'Ett stort och varierande urval av baklawa former. Innehåller: Vetemjöl, majsstärkelse, animalisk margarin, mjölk, solrosolja, glukos, fyllning pistage & valnötter.',
     priceSt: '12 kr',
-    priceKg: '280 SEK'
+    priceKg: '280 kr'
   },
   {
-    name: 'OSMA LEYYELI PISTACHIO',
+    name: 'OSMA LEYYELI PISTAGE',
     image: '/Images/Desert/LEYYELI-PISTACHIO.png',
-    desc: 'Contains: wheat flour, corn starch, sunflower oil, glucose, salt, syrup, animal margarine, filling, pistachios',
+    desc: 'Innehåller: vetemjöl, majsstärkelse, solrosolja, glukos, salt, sirap, animalisk margarin, fyllning, pistagenötter',
 priceSt: '15 kr',
-    priceKg: '330 SEK'  },
+    priceKg: '330 kr'  },
   {
-    name: 'PASTRY FRUIT VANILLA CREAM',
+    name: 'BAKELSE FRUKT VANILJGRÄDDE',
     image: '/Images/Desert/VANILLA-CREAM.png',
-    desc: 'White cake base, cream, fruit cocktail, white chocolate',
+    desc: 'Vittårtbotten, grädde, fruktkoktail, vitchoklad',
       priceSt: '40 kr'
   },
   {
-    name: 'PASTRY FRUIT CHOCOLATE',
+    name: 'BAKELSE FRUKT CHOKLAD',
     image: '/Images/Desert/pastry-fruit-chocklate.png',
-    desc: 'Chocolate cake base, cream, fruit something, chocolate.',
+    desc: 'Chokladtårtbotten, grädde, frukt något, choklad',
     priceSt: '40 kr'
   }
 ];
@@ -46,10 +46,11 @@ const DessertsSection = () => (
     {/* Main content */}
     <div className="max-w-6xl mx-auto relative z-10">
       <div className="text-center mb-8">
-        <h2 className="text-2xl md:text-3xl font-bold poppins-regular text-amber-900">Dessert Delights</h2>
-        <p className="mt-2 text-amber-800 md:text-lg">
-          Sweet treats to satisfy your cravings
-        </p>
+       <h2 className="text-2xl md:text-3xl font-bold poppins-regular text-amber-900">Dessertnjutningar</h2>
+<p className="mt-2 text-amber-800 md:text-lg">
+  Söta godsaker som stillar ditt sug
+</p>
+
       </div>
 
       {/* Grid layout */}

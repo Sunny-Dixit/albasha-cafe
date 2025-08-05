@@ -22,7 +22,7 @@ const CafeFooter = () => {
             </h2>
           </div>
           <p className="text-[#b8b8b8] text-center max-w-md italic font-light">
-            Crafting exceptional coffee experiences
+            Skapar exceptionella kaffeupplevelser
           </p>
         </div>
 
@@ -32,7 +32,7 @@ const CafeFooter = () => {
           <div className="p-6 rounded-xl bg-[#1a1a1a]/40 backdrop-blur-sm">
             <h3 className="text-xl font-bold mb-4 flex items-center text-[#c9af7f]">
               <FaMapMarkerAlt className="mr-2" />
-              Find Us
+              Hitta oss
             </h3>
             <ul className="space-y-3 mt-5">
               <li className="flex items-start">
@@ -54,7 +54,6 @@ const CafeFooter = () => {
                   albashagbg@hotmail.com
                 </a>
               </li>
-
             </ul>
           </div>
 
@@ -62,14 +61,14 @@ const CafeFooter = () => {
           <div className="p-6 rounded-xl bg-[#1a1a1a]/40 backdrop-blur-sm">
             <h3 className="text-xl font-bold mb-4 flex items-center text-[#c9af7f]">
               <FaClock className="mr-2" />
-              Opening Hours
+              Öppettider
             </h3>
 
             <ul className="space-y-3 mt-5">
               {[
-                { day: "Monday - Friday", time: "11:00 AM - 21:00 PM" },
-                { day: "Saturday", time: "11:00 AM - 21:00 PM" },
-                { day: "Sunday", time: "11:00 AM - 21:00 PM" },
+                { day: "Måndag - Fredag", time: "11:00 - 21:00" },
+                { day: "Lördag", time: "11:00 - 21:00" },
+                { day: "Söndag", time: "11:00 - 21:00" },
               ].map((item, i) => (
                 <li key={i} className="flex justify-between py-2 border-b border-[#ffffff08] last:border-0">
                   <span className="text-[#b8b8b8]">{item.day}</span>
@@ -83,14 +82,14 @@ const CafeFooter = () => {
           <div className="p-6 rounded-xl bg-[#1a1a1a]/40 backdrop-blur-sm">
             <h3 className="text-xl font-bold mb-4 flex items-center text-[#c9af7f]">
               <GiCoffeeBeans className="mr-2" />
-              Explore
+              Utforska
             </h3>
 
             <div className="grid grid-cols-2 gap-4 mt-5">
               {[
-                { label: "Menu", href: "/meny" },
-                { label: "About Us", href: "/om-oss" },
-                { label: "Gallery", href: "#gallery" },
+                { label: "Meny", href: "/meny" },
+                { label: "Om oss", href: "/om-oss" },
+                { label: "Galleri", href: "#gallery" },
               ].map((item, i) => (
                 <a
                   key={i}
@@ -102,49 +101,46 @@ const CafeFooter = () => {
                 </a>
               ))}
             </div>
-
-
           </div>
 
-          {/* Newsletter */}
-        <div className="p-6 rounded-xl bg-[#1a1a1a]/40 backdrop-blur-sm">
-  <div className="mt-6">
-    <h4 className="text-lg font-medium mb-3 text-[#e0e0e0]">Follow Us</h4>
-    <div className="flex flex-wrap gap-3">
-      {[
-        {
-          icon: <FaInstagram />,
-          name: "Instagram",
-          url: "https://www.instagram.com/al_basha_goteborg/",
-        },
-        {
-          icon: <FaFacebook />,
-          name: "Facebook",
-          url: "https://www.facebook.com/p/Al-Basha-G%C3%B6teborg-100063721565861/",
-        },
-        {
-          icon: <FaTiktok />,
-          name: "TikTok",
-          url: "https://www.tiktok.com/@albasha.gothenborg",
-        },
-      ].map((social, i) => (
-        <a
-          key={i}
-          href={social.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center px-4 py-2 bg-[#1a1a1a] rounded-lg hover:bg-[#c9af7f] transition group border border-[#2c2c2c]"
-        >
-          <span className="mr-2 text-[#c9af7f] group-hover:text-[#0d0d0d]">
-            {social.icon}
-          </span>
-          <span className="text-sm group-hover:text-[#0d0d0d]">{social.name}</span>
-        </a>
-      ))}
-    </div>
-  </div>
-</div>
-
+          {/* Social / Newsletter */}
+          <div className="p-6 rounded-xl bg-[#1a1a1a]/40 backdrop-blur-sm">
+            <div className="mt-6">
+              <h4 className="text-lg font-medium mb-3 text-[#e0e0e0]">Följ oss</h4>
+              <div className="flex flex-wrap gap-3">
+                {[
+                  {
+                    icon: <FaInstagram />,
+                    name: "Instagram",
+                    url: "https://www.instagram.com/al_basha_goteborg/",
+                  },
+                  {
+                    icon: <FaFacebook />,
+                    name: "Facebook",
+                    url: "https://www.facebook.com/p/Al-Basha-G%C3%B6teborg-100063721565861/",
+                  },
+                  {
+                    icon: <FaTiktok />,
+                    name: "TikTok",
+                    url: "https://www.tiktok.com/@albasha.gothenborg",
+                  },
+                ].map((social, i) => (
+                  <a
+                    key={i}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center px-4 py-2 bg-[#1a1a1a] rounded-lg hover:bg-[#c9af7f] transition group border border-[#2c2c2c]"
+                  >
+                    <span className="mr-2 text-[#c9af7f] group-hover:text-[#0d0d0d]">
+                      {social.icon}
+                    </span>
+                    <span className="text-sm group-hover:text-[#0d0d0d]">{social.name}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Copyright section */}
@@ -152,15 +148,14 @@ const CafeFooter = () => {
           <div className="flex items-center mb-4 md:mb-0">
             <GiCoffeeBeans className="mr-2 text-[#c9af7f]" />
             <p className="text-[#7d7d7d] text-sm sm:text-base">
-              © {new Date().getFullYear()} Albasha Sweets & Coffee. All rights reserved.{" "}
+              © {new Date().getFullYear()} Albasha Sweets & Coffee. Alla rättigheter förbehållna.{" "}
               <span className="block sm:inline mt-1 sm:mt-0">
-                Powered by <a href="https://genesisvirtue.com" className="text-pink-600 hover:underline" target="_blank" rel="noopener noreferrer">Genesis Virtue</a>.
+                Drivs av <a href="https://genesisvirtue.com" className="text-pink-600 hover:underline" target="_blank" rel="noopener noreferrer">Genesis Virtue</a>.
               </span>
             </p>
-
           </div>
           <div className="flex flex-wrap justify-center gap-4 md:gap-6">
-            {["Privacy", "Terms"].map((item, i) => (
+            {["Integritet", "Villkor"].map((item, i) => (
               <a
                 key={i}
                 href="#"

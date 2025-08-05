@@ -9,7 +9,6 @@ const Header = () => {
     { label: "Hem", path: "/" },
     { label: "Meny", path: "/meny" },
     { label: "Om oss", path: "/om-oss" },
-    { label: "Kontakt", path: "/contact" },
   ];
 
   return (

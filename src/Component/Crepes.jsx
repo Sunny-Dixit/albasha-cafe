@@ -11,34 +11,34 @@ const CrepesItems = [
     name: 'NUTELLA CREPE',
     image: '/Images/Crepe/nutella-crepe.png',
     icon: <GiStrawberry className="text-red-500" />, // fruit-themed
-    description: 'Nutella, Cream, Fruit',
+    description: 'Nutella, Grädde, Frukt',
     price: '129 kr',
     accent: 'from-rose-50 to-red-100'
   },
   {
-    name: "CHILDREN'S CREPES",
+    name: "KINDER CREPES",
     image: '/Images/Crepe/childeren-crepe.png',
     icon: <FaChild className="text-amber-800" />, // child-friendly icon
-    description: 'Nutella, White chocolate, Cream, Fruit',
+    description: 'Nutella, Vit chocklad, Grädde, Frukt',
     price: '129 kr',
     accent: 'from-yellow-50 to-amber-100'
   },
   {
-    name: "CREPE'S ROLE",
+    name: "CREPES ROLL",
     image: '/Images/Crepe/crepe-roll.png',
     icon: <GiBananaBunch className="text-yellow-600" />, // banana/pistachio focus
-    description: 'Nutella, white chocolate, pistachios, cream, banana, fruit',
+    description: 'Nutella, vit chocklad, Pistagenötter, Grädde, Banan, Frukt',
     price: '139 kr',
     accent: 'from-yellow-50 to-yellow-100'
   },
   {
-  name: 'MINI PANCAKES 9 PCS',
-  image: '/Images/Crepe/mini-pancake.png',
-  icon: <PiStackSimpleFill className="text-blue-800" />,
-  description: 'Nutella, white chocolate, cream, fruit',
-  price: '129 kr',
-  accent: 'from-blue-50 to-sky-100'
-}
+    name: 'MINI PANCAKE 9 ST',
+    image: '/Images/Crepe/mini-pancake.png',
+    icon: <PiStackSimpleFill className="text-blue-800" />,
+    description: 'Nutella, vitchoklad, grädde, frukt',
+    price: '129 kr',
+    accent: 'from-blue-50 to-sky-100'
+  }
 ];
 
 
@@ -52,10 +52,10 @@ const CrepesSection = () => (
       <div className="text-center mb-16">
         <div className="inline-flex items-center justify-center mb-5">
           <TbChefHat className="text-4xl text-amber-600 mr-3" />
-          <h2 className="text-4xl poppins-regular font-extrabold text-gray-800 font-serif">Our Signature Crêpes</h2>
+          <h2 className="text-3xl poppins-regular font-extrabold text-gray-800 font-serif">Våra signaturcrêpes</h2>
         </div>
         <p className="text-gray-600 poppins-regular max-w-xl mx-auto text-lg">
-          Sweet or savory, discover crêpes made with love and flair.
+          Söta eller salta – upptäck crêpes gjorda med kärlek och stil.
         </p>
       </div>
 
@@ -90,19 +90,18 @@ const CrepesSection = () => (
             <p className="text-gray-600 text-sm mb-4">{item.description}</p>
 
             {/* Button */}
-       
-          </div> 
+
+          </div>
         ))}
       </div>
 
       {/* Bottom CTA */}
-     <div className="text-center mt-16">
-  <Link to="/meny">
-    <button className="px-6 py-3 poppins-regular border-2 border-amber-600 text-amber-700 font-semibold rounded-full hover:bg-amber-600 hover:text-white transition-colors">
-      View Full Menu
-    </button>
-  </Link>
-</div>
+      <div className="text-center mt-16">
+        <Link to="/meny">
+          <button className="px-6 py-3 poppins-regular border-2 border-amber-600 text-amber-700 font-semibold rounded-full hover:bg-amber-600 hover:text-white transition-colors">
+            Visa hela menyn    </button>
+        </Link>
+      </div>
     </div>
 
     {/* Decorative Circles */}

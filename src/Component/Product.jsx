@@ -19,45 +19,41 @@ const ProductsSection = () => {
     };
 
     const coffeeProducts = [
-    {
-        id: 1,
-        name: "Arabic Coffee",
-        prices: [
-            { variant: "Simple", amount: 30 },
-            { variant: "Double", amount: 40 }
-        ],
-        image: "/Images/coffe-1-main.jpg",
-        tags: ["Single Origin", "Ljusrost"],
-        isNew: true,
-        thought: "Mild smak med en touch av kryddor"
-    },
-    {
-        id: 2,
-        name: "Cappuccino",
-        price: 49,
-        image: "/Images/coffe-2-main.jpg",
-        tags: ["Single Origin", "Mellanrost"],
-        isBestSeller: true,
-        thought: "Krämig med en balanserad kaffesmak"
-    },
-    {
-        id: 3,
-        name: "Brew Coffee",
-        price: 34,
-        image: "/Images/coffe-3.png",
-        tags: ["Blend", "Mörkrost"],
-        isFeatured: true,
-        thought: "Stark smak med en hint av karamell"
-    },
-    {
-        id: 4,
-        name: "Coffee latte",
-        price: 53,
-        image: "/Images/coffe-4.png",
-        tags: ["Single Origin", "Mellanrost"],
-        thought: "Mjuk och söt med smak av mjölk"
-    },
-];
+        {
+            id: 1,
+            name: "Arabisk Kaffe",
+            prices: [
+                { variant: "Enkel", amount: 30 },
+                { variant: "Dubbel", amount: 40 }
+            ],
+            image: "/Images/coffe-1-main.jpg",
+            isNew: true,
+            thought: "Mild smak med en touch av kryddor"
+        },
+        {
+            id: 2,
+            name: "Cappucino",
+            price: 49,
+            image: "/Images/coffe-2-main.jpg",
+            isBestSeller: true,
+            thought: "Krämig med en balanserad kaffesmak"
+        },
+        {
+            id: 3,
+            name: "Brygg Kaffe",
+            price: 34,
+            image: "/Images/coffe-3.png",
+            isFeatured: true,
+            thought: "Stark smak med en hint av karamell"
+        },
+        {
+            id: 4,
+            name: "Kaffelatte",
+            price: 53,
+            image: "/Images/coffe-4.png",
+            thought: "Mjuk och söt med smak av mjölk"
+        },
+    ];
 
 
     const filters = ['Alla', 'Single Origin', 'Blandningar', 'Ljusrost', 'Mörkrost'];
@@ -65,25 +61,33 @@ const ProductsSection = () => {
     return (
         <div className="bg-[#fefaf6] poppins-black">
             {/* Hero Section */}
-<div className="bg-[#fefaf6] poppins-black">
-  {/* Hero Section */}
-  <div
-    className="relative min-h-[400px] sm:min-h-[450px] md:min-h-[500px] lg:min-h-[650px] xl:min-h-[750px] w-full bg-cover bg-center bg-no-repeat"
-    style={{ backgroundImage: "url('/Images/header.png')" }}
-  >
-    {/* Content here if needed */}
+            {/* Fixed Background Hero Section */}
+            <div
+  className="relative w-full h-screen bg-fixed bg-center bg-cover bg-no-repeat"
+  style={{ backgroundImage: "url('/Images/Banner/header-2.avif')" }}
+>
+  <div className="absolute inset-0 bg-opacity-30 flex items-center justify-center">
+    {/* Optional Text */}
+  
   </div>
 </div>
 
 
 
+
+
             {/* Produktsektion */}
             <section className="max-w-7xl mx-auto py-16 px-4 ">
-                <div className="text-center mb-10">
-                    <h2 className="text-4xl poppins-regular font-bold text-[#4b2e22]">What's Brewing Now</h2>
-                    <p className="text-sm poppins-regular text-gray-600 mt-2">Hover to hear what each coffee has to say</p>
-                    <div className="w-16 h-1 bg-amber-500 mx-auto mt-3"></div>
+                <div className="text-center mb-10 px-4">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl poppins-regular font-bold text-[#4b2e22]">
+                        Vad som brygger nu
+                    </h2>
+                    <p className="text-xs sm:text-sm poppins-regular text-gray-600 mt-2">
+                        Hovra för att höra vad varje kaffe har att säga
+                    </p>
+                    <div className="w-12 sm:w-16 h-1 bg-amber-500 mx-auto mt-3"></div>
                 </div>
+
 
 
                 {/* Produktgrid */}
@@ -109,7 +113,7 @@ const ProductsSection = () => {
                                 </div>
 
 
-                                
+
                             </div>
 
                             <h3 className="mt-4 text-lg poppins-regular font-medium text-gray-800 text-center">{product.name}</h3>

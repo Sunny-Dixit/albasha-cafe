@@ -3,11 +3,11 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const cafeImages = [
-  "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80", // Left 1
-  "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80", // Left 2
-  "https://images.unsplash.com/photo-1463797221720-6b07e6426c24?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80", // Center (large)
-  "https://images.unsplash.com/photo-1445116572660-236099ec97a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80", // Right 1
-  "https://images.unsplash.com/photo-1505275350441-83dcda8eeef5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80", // Right 2
+  "/Images/Gallery/gallery-left-1.webp", // Left 1
+  "/Images/Gallery/gallery-left-2.webp", // Left 2
+  "/Images/Gallery/gallery-center.webp", // Center (large)
+  "/Images/Gallery/gallery-right-1.webp", // Right 1
+  "/Images/Gallery/gallery-right-2.webp", // Right 2
 ];
 
 const GalleryItem = ({ src, alt, delay = 0, className = "" }) => {
@@ -76,9 +76,9 @@ export default function Gallery() {
             },
             hidden: { opacity: 0, y: 30 },
           }}
-          className="text-4xl md:text-5xl poppins-regular font-bold text-center mb-12 text-gray-800 font-serif"
+          className="text-3xl md:text-4xl poppins-regular font-bold text-center mb-12 text-gray-800 font-serif"
         >
-          Albasha Cafe Space
+Albasha Caféutrymme
         </motion.h2>
         
         <div className="grid grid-cols-1 md:grid-cols-5 gap-1">

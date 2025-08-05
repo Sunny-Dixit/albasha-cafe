@@ -4,29 +4,29 @@ import { motion } from 'framer-motion';
 
 const items = [
   {
-    name: 'LOTUS CHEESE CAKE',
-    desc: 'Egg yolk, cream, gelatin, lotus biscuits, sugar, glucose, Philadelphia chees',
+    name: 'LOTUS CHESECAKE',
+    desc: 'Äggula, Grädde, Gelatin, Lotuskex, Socker, Glukos, Philadelphia ost',
     price: '40 kr',
     icon: <FaBirthdayCake className="text-pink-500 text-2xl" />,
     image: '/Images/cake-1.jpg',
   },
   {
-    name: 'HAZELNUTS PASTRY',
-    desc: 'Salted caramel, Chocolate cake base, Hazelnuts, Cream, Gelatin.',
+    name: 'HASSELNÖTTER BAKELSE',
+    desc: 'Saltadcaramel, Chokladtårtbotten, Hasselnötter, Grädde, Gelatin.',
     price: '40 kr',
     icon: <FaIceCream className="text-rose-500 text-2xl" />,
     image: '/Images/cake-2.jpg',
   },
   {
-    name: 'CHOCOLATE PASTRY',
-    desc: 'Krispig croissant med söt mandelfyllning och rostade mandlar.',
+    name: 'CHOKLAD BAKELSE',
+    desc: 'En saftig chokladbakelse med rik smak och len chokladkräm – en dröm för alla chokladälskare.',
     price: '40 kr',
     icon: <FaCookieBite className="text-amber-500 text-2xl" />,
     image: '/Images/cake-3.jpg',
   },
   {
-    name: 'RASPBERRY PASTRY',
-    desc: 'Lyxig röd cupcake med fyllig cream cheese-frosting.',
+    name: 'HALLON BAKELSE',
+    desc: 'En frisk hallonbakelse med luftig botten, söt bärkräm och syrliga hallon – en perfekt balans av sött och friskt.',
     price: '40 kr',
     icon: <FaCheese className="text-yellow-600 text-2xl" />,
     image: '/Images/cake-4.jpg',
@@ -53,12 +53,20 @@ export default function CakesAndPastries() {
         viewport={{ once: true }}
         className="text-center mb-16 relative z-10"
       >
-        <div className="flex justify-center items-center gap-3 mb-4">
-          <img src="/Images/cake.png" alt="Kakikon" className="w-12 h-12" />
-          <h2 className="text-4xl poppins-regular font-bold text-[#4b2e22]">Cakes & Pastries</h2>
-        </div>
+      <div className="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-3 mb-4 text-center sm:text-left">
+  <img
+    src="/Images/cake.png"
+    alt="Kakikon"
+    className="w-10 h-10 sm:w-12 sm:h-12"
+  />
+  <h2 className="text-2xl sm:text-3xl md:text-4xl poppins-regular font-bold text-[#4b2e22] mt-2 sm:mt-0">
+    Tårtor & Bakverk
+  </h2>
+</div>
+
         <p className="text-gray-600 poppins-regular max-w-xl mx-auto text-sm">
-Treat yourself to our delicious selection of freshly baked treats – baked with love.        </p>
+          Unna dig vårt utsökta urval av nybakade godsaker – bakade med kärlek.
+       </p>
       </motion.div>
 
       {/* Card Grid */}

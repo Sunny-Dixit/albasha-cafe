@@ -9,37 +9,37 @@ const PopularItems = () => {
       id: 1,
       name: "Dubai Strawberry Cup",
       description:
-        "The viral Dubai Chocolate Strawberry Cup is a dreamy dessert with a perfect combination of crispy kadayif threads, smooth pistachio cream, sweet milk chocolate and juicy strawberries.",
+        "Den virala Dubai Chocolate Strawberry Cup är en drömmig dessert med en perfekt kombination av krispiga kadayiftrådar, len pistagekräm, söt mjölkchoklad och saftiga jordgubbar.",
       image: "/Images/Popular/popular-1.avif",
       prices: [
-        { label: "Without Ice Cream", price: "109 kr" },
-        { label: "With Ice Cream", price: "129 kr" },
+        { label: "Utan Glass", price: "109 kr" },
+        { label: "Med Glass", price: "129 kr" },
       ],
     },
     {
       id: 2,
-      name: "Nutella Explosion Waffle",
+      name: "Nutella Explosion Våffla (TikTok)",
       description:
-        "Waffle drenched in Nutella topped with a scoop of milk chocolate ice cream, sliced strawberries and fluffy Swedish whipped cream topped with Oreo.",
+        "Våffla dränkt i Nutella toppad med en kula mjölkchoklad glass, skivade jordgubbar och fluffig svensk vispgrädde toppad med Oreo.",
       image: "/Images/Popular/popular-2.avif",
       prices: [{ price: "139 kr" }],
     },
     {
       id: 3,
-      name: "DUBAI CHOCOLATE",
+      name: "DUBAI CHOCKLAD",
       description:
-        "A combination of crispy kunafa dough with a rich pistachio filling. Encased in a layer of the highest quality chocolate.",
+        "En kombinerad krispig kunafa-deg med rik pistachiofyllning. Omsluten av ett lager choklad av högsta kvalitet.",
       image: "/Images/Popular/popular-3.avif",
       prices: [
-        { label: "Small (approx. 180g)", price: "120 kr" },
-        { label: "Large (approx. 450g)", price: "300 kr" },
+        { label: "Liten (ca 180g)", price: "120 kr" },
+        { label: "Stor (ca 450g)", price: "300 kr" },
       ],
     },
     {
       id: 4,
-      name: "DUBAI PASTRY",
+      name: "DUBAI BAKELSE",
       description:
-        "A cake base with dubai filling (crispy kunafa dough with rich pistachio filling). Topped with chocolate and pistachio cream.",
+        "En tårtbotten med dubai fyllning (krispig kunafa-deg med rik pistachiofyllning). Toppad med chocklad och pistagekräm.",
       image: "/Images/Popular/popular-4.avif",
       prices: [{ price: "60 kr" }],
     },
@@ -47,7 +47,7 @@ const PopularItems = () => {
       id: 5,
       name: "DUBAI CREPES",
       description:
-        "A tasty crepe with dubai filling (crispy kunafa dough with rich pistachio filling). Topped with nutella chocolate, pistachio sauce and pistachios.",
+        "En smakrik crepes med dubai fyllning (krispig kunafa-deg med rik pistachiofyllning). Toppad med nutella chocklad, pistagesås och pistagenötter.",
       image: "/Images/Popular/popular-5.avif",
       prices: [{ price: "179 kr" }],
     },
@@ -72,19 +72,20 @@ const PopularItems = () => {
       <div className="text-center mb-6 relative z-10">
         <div className="inline-block bg-gradient-to-r from-amber-400 to-rose-500 text-white px-3 py-1 rounded-full mb-2">
           <span className="flex items-center">
-            <FiStar className="mr-2" /> Customer Favorites
+            <FiStar className="mr-2" /> Kundfavoriter
           </span>
         </div>
-        <h2 className="text-2xl md:text-3xl font-bold text-[#3a251b] mb-1">
-          Our{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-rose-700">
-            Most Loved
-          </span>{" "}
-          Treats
-        </h2>
-        <p className="text-base text-[#6d4c3d] max-w-xl mx-auto">
-          A curated collection of customer favorites that became instant hits.
-        </p>
+       <h2 className="text-2xl md:text-3xl font-bold text-[#3a251b] mb-1">
+  Våra{" "}
+  <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-rose-700">
+    Mest Älskade
+  </span>{" "}
+  Godsaker
+</h2>
+<p className="text-base text-[#6d4c3d] max-w-xl mx-auto">
+  En noggrant utvald samling av kundfavoriter som snabbt blev succéer.
+</p>
+
       </div>
 
       <div className="relative max-w-6xl mx-auto overflow-hidden z-10">
@@ -139,7 +140,7 @@ const PopularItems = () => {
                     className="flex justify-between items-center bg-gradient-to-r from-amber-50 to-amber-100 p-3 rounded-lg border border-amber-200"
                   >
                     <span className="text-xs font-medium text-gray-700">
-                      {p.label || "Price"}
+                      {p.label || "Pris"}
                     </span>
                     <span className="text-base font-bold text-rose-700 bg-white px-3 py-1 rounded-md shadow-sm">
                       {p.price}

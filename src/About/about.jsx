@@ -616,81 +616,56 @@ const AboutUs = () => {
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              {seasonalItems.find(s => s.season === seasons[currentSeason].name)?.items.map((item, index) => (
-                <motion.div
-                  key={index}
-                  className="h-[400px] perspective-1000"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1, duration: 0.6 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  onMouseEnter={() => setHoveredCard(`menu-${index}`)}
-                  onMouseLeave={() => setHoveredCard(null)}
-                >
-                  <div className="relative w-full h-full transition-all duration-700 transform-style-preserve-3d group hover:rotate-y-180">
-                    {/* Front of card */}
-                    <div className="absolute w-full h-full backface-hidden bg-white rounded-2xl shadow-xl p-8 flex flex-col justify-between overflow-hidden">
-                      <div>
-                        <div className="w-20 h-20 rounded-full mb-6 flex items-center justify-center shadow-md"
-                          style={{ background: seasons[currentSeason].color }}>
-                          {React.cloneElement(seasons[currentSeason].icon, {
-                            size: 36,
-                            color: seasons[currentSeason].darkColor
-                          })}
-                        </div>
-                        <h3 className="text-2xl font-bold mb-3">{item.name}</h3>
-                        <p className="text-gray-600 mb-6">{item.desc}</p>
+        <div className="grid md:grid-cols-3 gap-8">
+  {seasonalItems.find(s => s.season === seasons[currentSeason].name)?.items.map((item, index) => (
+    <motion.div
+      key={index}
+      className="h-[400px]"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: index * 0.1, duration: 0.6 }}
+      viewport={{ once: true, margin: "-100px" }}
+      whileHover={{
+        scale: 1.03,
+        y: -5,
+        boxShadow: "0 12px 24px rgba(0, 0, 0, 0.1)"
+      }}
+    >
+      <div className="relative w-full h-full bg-white rounded-2xl shadow-xl p-8 flex flex-col justify-between overflow-hidden transition-transform duration-300">
+        <div>
+          <div
+            className="w-20 h-20 rounded-full mb-6 flex items-center justify-center shadow-md"
+            style={{ background: seasons[currentSeason].color }}
+          >
+            {React.cloneElement(seasons[currentSeason].icon, {
+              size: 36,
+              color: seasons[currentSeason].darkColor
+            })}
+          </div>
+          <h3 className="text-2xl font-bold mb-3">{item.name}</h3>
+          <p className="text-gray-600 mb-6">{item.desc}</p>
+        </div>
 
-                        {/* Ingredient visualization */}
-                       
-                      </div>
+        <div>
+          <p className="text-lg font-medium mb-2" style={{ color: seasons[currentSeason].darkColor }}>
+            {item.price}
+          </p>
+          <p className="text-sm text-gray-500">
+            Pairs perfectly with: <span className="font-medium">{item.pairing}</span>
+          </p>
+        </div>
 
-                      <div>
-                        <p className="text-lg font-medium mb-2" style={{ color: seasons[currentSeason].darkColor }}>
-                          {item.price}
-                        </p>
-                        <p className="text-sm text-gray-500">
-                          Pairs perfectly with: <span className="font-medium">{item.pairing}</span>
-                        </p>
-                      </div>
+        {/* Decorative corner */}
+        <div
+          className="absolute -bottom-10 -right-10 w-32 h-32 rounded-full opacity-10"
+          style={{ backgroundColor: seasons[currentSeason].darkColor }}
+        />
+      </div>
+    </motion.div>
+  ))}
+</div>
 
-                      {/* Decorative corner */}
-                      <div className="absolute -bottom-10 -right-10 w-32 h-32 rounded-full opacity-10"
-                        style={{ backgroundColor: seasons[currentSeason].darkColor }} />
-                    </div>
 
-                    {/* Back of card */}
-                    <div className="absolute w-full h-full backface-hidden rounded-2xl shadow-xl p-8 flex items-center justify-center rotate-y-180 overflow-hidden"
-                      style={{
-                        background: seasons[currentSeason].darkColor,
-                        color: seasons[currentSeason].color
-                      }}>
-                      <div className="text-center p-6">
-                        <div className="text-5xl mb-6">
-                          {React.cloneElement(seasons[currentSeason].icon, { size: 48 })}
-                        </div>
-                        <p className="text-xl font-medium mb-2">"{seasons[currentSeason].name}'s Special"</p>
-                        <p className="opacity-80 mb-6">A seasonal masterpiece</p>
-                        <motion.div
-                          className="inline-block px-6 py-2 rounded-full border border-current"
-                          whileHover={{
-                            backgroundColor: seasons[currentSeason].color,
-                            color: seasons[currentSeason].darkColor
-                          }}
-                        >
-                          <span className="font-medium">Recipe Story</span>
-                        </motion.div>
-                      </div>
-
-                      {/* Decorative corner */}
-                      <div className="absolute -bottom-10 -right-10 w-32 h-32 rounded-full opacity-10"
-                        style={{ backgroundColor: seasons[currentSeason].color }} />
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
           </div>
         </section>
 
@@ -827,75 +802,50 @@ const AboutUs = () => {
               </motion.div>
 
               {/* Interactive Map */}
-              <motion.div
-                className="md:w-1/2 relative"
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <div className="sticky top-28 h-[600px] rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
-                  {/* Map placeholder with seasonal overlay */}
-                  <div className="absolute inset-0 bg-gray-300 flex items-center justify-center">
-                    <span className="text-gray-500">[Interactive Map]</span>
-                  </div>
+             <motion.div
+  className="md:w-1/2 relative"
+  initial={{ opacity: 0, x: 30 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+>
+  <div className="sticky top-28 h-[600px] rounded-3xl overflow-hidden shadow-2xl border-8 border-white relative">
+    {/* Google Maps iframe */}
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2129.4694844542923!2d12.005834476065099!3d57.74245183701766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff4f7c230e59d%3A0xd475a2d022e1751b!2sAl%20Basha%20G%C3%B6teborg!5e0!3m2!1sen!2sin!4v1754371141314!5m2!1sen!2sin"
+      width="100%"
+      height="100%"
+      style={{ border: 0 }}
+      allowFullScreen=""
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+      className="absolute inset-0 z-0"
+    ></iframe>
 
-                  {/* Seasonal marker */}
-                  <motion.div
-                    className="absolute top-1/2 left-1/2 w-16 h-16 rounded-full flex items-center justify-center shadow-xl"
-                    style={{
-                      backgroundColor: seasons[currentSeason].darkColor,
-                      color: seasons[currentSeason].color
-                    }}
-                    animate={{
-                      scale: [1, 1.1, 1],
-                      y: [-10, 0, -10]
-                    }}
-                    transition={{
-                      duration: 3,
-                      repeat: Infinity
-                    }}
-                  >
-                    <GiCoffeeCup size={24} />
-                  </motion.div>
+    {/* Seasonal marker */}
+    <motion.div
+      className="absolute top-1/2 left-1/2 w-16 h-16 rounded-full flex items-center justify-center shadow-xl z-10"
+      style={{
+        backgroundColor: seasons[currentSeason].darkColor,
+        color: seasons[currentSeason].color,
+        transform: "translate(-50%, -50%)"
+      }}
+      animate={{
+        scale: [1, 1.1, 1],
+        y: [-10, 0, -10]
+      }}
+      transition={{
+        duration: 3,
+        repeat: Infinity
+      }}
+    >
+      <GiCoffeeCup size={24} />
+    </motion.div>
 
-                  {/* Info card */}
-                  <motion.div
-                    className="absolute bottom-8 left-8 right-8 bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-lg"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.4 }}
-                  >
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-full flex items-center justify-center"
-                        style={{
-                          backgroundColor: seasons[currentSeason].color,
-                          color: seasons[currentSeason].darkColor
-                        }}>
-                        {React.cloneElement(seasons[currentSeason].icon, { size: 20 })}
-                      </div>
-                      <div>
-                        <h4 className="font-bold">Fika {seasons[currentSeason].name}</h4>
-                        <p className="text-sm text-gray-600">Come experience our seasonal offerings</p>
-                      </div>
-                    </div>
+   
+  </div>
+</motion.div>
 
-                    <motion.button
-                      className="mt-4 w-full py-3 rounded-lg font-medium"
-                      style={{
-                        backgroundColor: seasons[currentSeason].darkColor,
-                        color: seasons[currentSeason].color
-                      }}
-                      whileHover={{
-                        y: -2,
-                        boxShadow: `0 5px 15px rgba(${hexToRgb(seasons[currentSeason].darkColor)}, 0.3)`
-                      }}
-                    >
-                      Get Directions
-                    </motion.button>
-                  </motion.div>
-                </div>
-              </motion.div>
             </div>
           </div>
         </section>

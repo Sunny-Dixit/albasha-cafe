@@ -5,28 +5,24 @@ const shakes = [
   {
     name: 'Strawberry Milkshake',
     image: '/Images/Shake/strawberry-milkshake.png',
-    description: 'Classic strawberry milkshake – sweet and creamy',
     price: '75 kr',
     color: 'bg-rose-100'
   },
   {
     name: 'Avocado Milkshake',
     image: '/Images/Shake/Avocado-Milkshake.png',
-    description: 'Nutritious and smooth avocado in every sip',
     price: '85 kr',
     color: 'bg-amber-100'
   },
   {
     name: 'Pina Colada',
     image: '/Images/Shake/pina-colada.png',
-    description: 'Pineapple and coconut in tropical harmony',
     price: '89 kr',
     color: 'bg-lime-100'
   },
   {
     name: 'Mojito',
     image: '/Images/Shake/mojito.avif',
-    description: 'Fresh mint, lime juice',
     price: '89 kr',
     color: 'bg-purple-100'
   }
@@ -48,20 +44,22 @@ const ShakesSection = () => {
 
       {/* Header */}
      <div className="max-w-2xl mx-auto text-center mb-10 px-4">
-  <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold poppins-regular text-gray-900 font-serif">
-      Our Shaking Creations
-    </h2>
-    <div className="w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16">
+  <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
+    <div className="w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16">
       <iframe
         src="https://lottie.host/embed/5ceae3a1-fe39-4c70-b77c-d4e2bcf10f77/PUy3IiyF2B.lottie"
         className="w-full h-full"
         title="Shake Animation"
       ></iframe>
     </div>
+    <h2 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold poppins-regular text-gray-900 font-serif">
+      Våra skakande skapelser
+    </h2>
+    
   </div>
-  <p className="text-sm sm:text-base md:text-lg text-gray-600 poppins-regular mt-3">
-    Thick, creamy & full of flavor – shake it up!
+
+  <p className="text-xs sm:text-sm md:text-base text-gray-600 poppins-regular mt-3 leading-relaxed">
+    Tjock, krämig och full av smak – skaka loss!
   </p>
 </div>
 
